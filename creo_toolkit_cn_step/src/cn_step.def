@@ -1,0 +1,4 @@
+EXPORTS
+    user_initialize
+    user_terminate
+    cn_about_test

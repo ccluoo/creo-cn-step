@@ -1,0 +1,69 @@
+功能区选项卡（落落工具）技术说明
+================================
+
+结论
+----
+功能区选项卡是纯数据文件实现的：release\text\<语言>\ribbon\toolkitribbonui.rbn，
+部署脚本会把它复制到 <Creo>\cc_luoluoo\text\<语言>\ribbon\，Creo 启动时自动
+加载，不需要用户做任何手工定制。
+
+同时插件在 user_initialize 里还会调一次
+    ProRibbonDefinitionfileLoad(L"toolkitribbonui.rbn")
+做兜底；返回码写进 cn_step_load.log 的 rbn= 字段：
+    0    = PRO_TK_NO_ERROR，加载成功
+    -6   = PRO_TK_IN_USE，Creo 已自动加载过（同样是好的）
+    -3   = PRO_TK_E_NOT_FOUND，文件没找到
+    -12  = PRO_TK_INVALID_FILE，格式不对
+
+
+.rbn 是什么格式
+---------------
+UGC 容器。关键发现：**未压缩形态下就是纯文本**，一行一条记录：
+
+    <层级数字> <属性名> <值>
+
+数字越大层级越深，行尾 "->" 表示后面跟着子节点，#END_OF_UGC 收尾。
+生成脚本在 tools\make_rbn.py，想改选项卡名字、加按钮，改它重新生成即可。
+
+结构上两个必须注意的点（都踩过坑）：
+
+1. 自定义页必须挂在**已存在的主功能区**上，不能自己发明一个 ribbon 名字。
+2. ribbon 名字和「模式」是绑定的，挂错名字就只在那个模式里出现：
+        main_adb_cat          起始页（没有打开模型时）
+        prt_main_adb_cat      零件
+        prt_smt_main_adb_cat  钣金零件
+        asm_main_adb_cat      装配
+        act_asm_main_adb_cat  装配（激活状态）
+   第一版只挂了 main_adb_cat，结果选项卡只在起始页出现，零件/装配里
+   看不到——所以现在一个 .rbn 里同时挂四个模型模式：
+
+    page   mName = user_custom_page_xxx@prt_main_adb_cat
+    ribbon mName = prt_main_adb_cat        （引用，不是新建）
+    mode   mName = prt_main_adb_cat
+
+    group（mType 12）里放命令（mType 1，mName = ProCmdActionAdd 注册名）
+    page（mType 11）里用 RbnDBGroupRef 引用 group
+    ribbon 里用 RbnDBPageRef 引用 page
+
+参照样本：Creo 自带的
+    Common Files\otk\otk_cpp\otk_async_examples\text\usascii\ribbon\
+        otkAsyncExamples.rbn          （未压缩，PTC 官方 toolkit 示例）
+    Common Files\apps\KeyShot\text\toolkitribbonui.rbn
+
+
+语言
+----
+两个语言目录下的 .rbn 都写中文「落落工具」——需求就是不管什么界面语言，
+选项卡都叫这个名。.rbn 里的字符串按 UTF-8 存，Creo 直接当 Unicode 显示，
+实测中文显示正常（Creo 13 零件模式已截图确认）。
+
+
+兜底的手工方案
+--------------
+万一某台机器的自动加载没生效（菜单入口不受影响），手工定制一次：
+    文件 → 选项 → 自定义功能区
+    → 命令来源选「ToolKit 命令」
+    → 新建选项卡，改名「落落工具」
+    → 把「导出中文 STEP（当前模型）」「关于落落」拖进去
+    → 导出定制
+这两个命令由插件用 ProCmdDesignate 注册过，任何版本都能在列表里找到。

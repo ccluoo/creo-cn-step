@@ -1,0 +1,28 @@
+﻿CnStepMenuLabel
+落落工具
+#
+#
+CnStepExportLabel
+导出中文 STEP（当前模型）
+#
+#
+CnStepExportHelp
+按 cn_step.cfg 导出当前模型，改成中文文件名，并改写 STEP 头 FILE_NAME
+#
+#
+CnStepExportDesc
+把当前零件/装配体导出为中文名 STEP 文件（SolidWorks 与 Creo 双份输出）
+#
+#
+CnStepAboutLabel
+关于落落
+#
+#
+CnStepAboutHelp
+显示落落工具的引用文献、作者、免责声明与联系方式
+#
+#
+CnStepAboutDesc
+关于落落工具：文献、作者、免责声明、联系方式
+#
+#

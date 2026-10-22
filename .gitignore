@@ -1,0 +1,41 @@
+# ---------- 构建产物 ----------
+build/
+dist/
+dist_*/
+*.obj
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.res
+*.idb
+*.tlog
+*.log
+
+# ---------- 二进制与发布包 ----------
+*.dll
+*.zip
+*.7z
+*.rar
+vs_BuildTools.exe
+
+# 历史发布快照目录：只保留源码，产物不入库
+cn_step_release_2026102*/
+
+# ---------- 测试截图 ----------
+*.png
+
+# ---------- Python ----------
+__pycache__/
+*.pyc
+*.pyo
+
+# ---------- 工具本地状态 ----------
+.workbuddy/
+
+# ---------- 系统 ----------
+Thumbs.db
+desktop.ini
+.DS_Store
+*.tmp
+*.bak

@@ -1,0 +1,228 @@
+#UGC:2 NEUTRAL 1606 440 800 0 0 15 3300 2011500 00000000 \
+#- VERS 0 0                                                          \
+#- HOST                                                              \
+#- LINK                                                              \
+#- DBID                                                              \
+#- REVS 0,                                                           \
+#- RELL 0,                                                           \
+#- UOBJ_ID 0 0 0                                                     \
+#- MACH                                                              \
+#-END_OF_UGC_HEADER
+#Creo  TM  Version P-10-14  (c) 2012 by Parametric Technology Corporation  All Rights Reserved. B000
+0 RbnDBData ->
+1 onCreation 
+2 mNumComments 0
+2 mDate 
+1 groupList [1] 
+2 groupList 
+3 ChildUnion(RbnDBGroup) ->
+4 RbnDBInheritContainer 
+5 mName user_custom_group_luoluo1
+5 mType 12
+5 mLabel 落落工具
+5 mAncestor 
+5 mKeyTip 
+5 mCustom 1
+5 Attributes 
+5 containerChildrenArray [2] 
+6 containerChildrenArray 
+7 ChildUnion(RbnDBCommand) ->
+8 mName CnStepExportCmd
+8 mType 1
+8 Attributes 
+8 mComponentClass CnStepExportCmd
+8 mColumns 0
+6 containerChildrenArray 
+7 ChildUnion(RbnDBCommand) ->
+8 mName CnStepAboutCmd
+8 mType 1
+8 Attributes 
+8 mComponentClass CnStepAboutCmd
+8 mColumns 0
+4 mToolLauncher 
+4 mBitmap 
+4 mPlugin 
+1 pageList [4] 
+2 pageList 
+3 ChildUnion(RbnDBPage) ->
+4 RbnDBInheritContainer 
+5 mName user_custom_page_luoluo1@prt_main_adb_cat
+5 mType 11
+5 mLabel 落落工具
+5 mAncestor 
+5 mKeyTip 
+5 mCustom 1
+5 Attributes 
+5 containerChildrenArray [1] 
+6 containerChildrenArray 
+7 ChildUnion(RbnDBGroupRef) ->
+8 mName user_custom_group_luoluo1
+8 mType 15
+8 Attributes 
+8 mRuntimeRemoved 0
+4 mCloseButton __RBN_DB_NO_CHANGE__
+4 mPlugin 
+2 pageList 
+3 ChildUnion(RbnDBPage) ->
+4 RbnDBInheritContainer 
+5 mName user_custom_page_luoluo1@prt_smt_main_adb_cat
+5 mType 11
+5 mLabel 落落工具
+5 mAncestor 
+5 mKeyTip 
+5 mCustom 1
+5 Attributes 
+5 containerChildrenArray [1] 
+6 containerChildrenArray 
+7 ChildUnion(RbnDBGroupRef) ->
+8 mName user_custom_group_luoluo1
+8 mType 15
+8 Attributes 
+8 mRuntimeRemoved 0
+4 mCloseButton __RBN_DB_NO_CHANGE__
+4 mPlugin 
+2 pageList 
+3 ChildUnion(RbnDBPage) ->
+4 RbnDBInheritContainer 
+5 mName user_custom_page_luoluo1@asm_main_adb_cat
+5 mType 11
+5 mLabel 落落工具
+5 mAncestor 
+5 mKeyTip 
+5 mCustom 1
+5 Attributes 
+5 containerChildrenArray [1] 
+6 containerChildrenArray 
+7 ChildUnion(RbnDBGroupRef) ->
+8 mName user_custom_group_luoluo1
+8 mType 15
+8 Attributes 
+8 mRuntimeRemoved 0
+4 mCloseButton __RBN_DB_NO_CHANGE__
+4 mPlugin 
+2 pageList 
+3 ChildUnion(RbnDBPage) ->
+4 RbnDBInheritContainer 
+5 mName user_custom_page_luoluo1@act_asm_main_adb_cat
+5 mType 11
+5 mLabel 落落工具
+5 mAncestor 
+5 mKeyTip 
+5 mCustom 1
+5 Attributes 
+5 containerChildrenArray [1] 
+6 containerChildrenArray 
+7 ChildUnion(RbnDBGroupRef) ->
+8 mName user_custom_group_luoluo1
+8 mType 15
+8 Attributes 
+8 mRuntimeRemoved 0
+4 mCloseButton __RBN_DB_NO_CHANGE__
+4 mPlugin 
+1 ribbonList [4] 
+2 ribbonList 
+3 ChildUnion(RbnDBRibbon) ->
+4 RbnDBContainer 
+5 mName prt_main_adb_cat
+5 mType 10
+5 Attributes 
+5 containerChildrenArray [1] 
+6 containerChildrenArray 
+7 ChildUnion(RbnDBPageRef) ->
+8 mName user_custom_page_luoluo1@prt_main_adb_cat
+8 mType 16
+8 Attributes 
+8 mRuntimeRemoved 0
+4 mLabel __RBN_DB_NO_CHANGE__
+4 mDescription __RBN_DB_NO_CHANGE__
+4 mPlugin 
+4 mCustom 0
+2 ribbonList 
+3 ChildUnion(RbnDBRibbon) ->
+4 RbnDBContainer 
+5 mName prt_smt_main_adb_cat
+5 mType 10
+5 Attributes 
+5 containerChildrenArray [1] 
+6 containerChildrenArray 
+7 ChildUnion(RbnDBPageRef) ->
+8 mName user_custom_page_luoluo1@prt_smt_main_adb_cat
+8 mType 16
+8 Attributes 
+8 mRuntimeRemoved 0
+4 mLabel __RBN_DB_NO_CHANGE__
+4 mDescription __RBN_DB_NO_CHANGE__
+4 mPlugin 
+4 mCustom 0
+2 ribbonList 
+3 ChildUnion(RbnDBRibbon) ->
+4 RbnDBContainer 
+5 mName asm_main_adb_cat
+5 mType 10
+5 Attributes 
+5 containerChildrenArray [1] 
+6 containerChildrenArray 
+7 ChildUnion(RbnDBPageRef) ->
+8 mName user_custom_page_luoluo1@asm_main_adb_cat
+8 mType 16
+8 Attributes 
+8 mRuntimeRemoved 0
+4 mLabel __RBN_DB_NO_CHANGE__
+4 mDescription __RBN_DB_NO_CHANGE__
+4 mPlugin 
+4 mCustom 0
+2 ribbonList 
+3 ChildUnion(RbnDBRibbon) ->
+4 RbnDBContainer 
+5 mName act_asm_main_adb_cat
+5 mType 10
+5 Attributes 
+5 containerChildrenArray [1] 
+6 containerChildrenArray 
+7 ChildUnion(RbnDBPageRef) ->
+8 mName user_custom_page_luoluo1@act_asm_main_adb_cat
+8 mType 16
+8 Attributes 
+8 mRuntimeRemoved 0
+4 mLabel __RBN_DB_NO_CHANGE__
+4 mDescription __RBN_DB_NO_CHANGE__
+4 mPlugin 
+4 mCustom 0
+1 modeList [4] 
+2 modeList 
+3 ChildUnion(RbnDBMode) ->
+4 RbnDBContainer 
+5 mName prt_main_adb_cat
+5 mType 9
+5 Attributes 
+4 mRibbon prt_main_adb_cat
+4 mLabel __RBN_DB_NO_CHANGE__
+4 mDescription __RBN_DB_NO_CHANGE__
+2 modeList 
+3 ChildUnion(RbnDBMode) ->
+4 RbnDBContainer 
+5 mName prt_smt_main_adb_cat
+5 mType 9
+5 Attributes 
+4 mRibbon prt_smt_main_adb_cat
+4 mLabel __RBN_DB_NO_CHANGE__
+4 mDescription __RBN_DB_NO_CHANGE__
+2 modeList 
+3 ChildUnion(RbnDBMode) ->
+4 RbnDBContainer 
+5 mName asm_main_adb_cat
+5 mType 9
+5 Attributes 
+4 mRibbon asm_main_adb_cat
+4 mLabel __RBN_DB_NO_CHANGE__
+4 mDescription __RBN_DB_NO_CHANGE__
+2 modeList 
+3 ChildUnion(RbnDBMode) ->
+4 RbnDBContainer 
+5 mName act_asm_main_adb_cat
+5 mType 9
+5 Attributes 
+4 mRibbon act_asm_main_adb_cat
+4 mLabel __RBN_DB_NO_CHANGE__
+4 mDescription __RBN_DB_NO_CHANGE__
+#END_OF_UGC
